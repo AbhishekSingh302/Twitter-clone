@@ -10,7 +10,7 @@ const TweetBox = () => {
 
   const sendTweet = e => {
     e.preventDefault();
-
+    if(tweetMessage !== ""){
     db.collection('posts').add({
       displayName: "Mr.Unknown",
       username: "newuser",
@@ -21,6 +21,7 @@ const TweetBox = () => {
     });
     setTweetMesssage("");
     setTweetImage("");
+  }
   }
 
   return (
